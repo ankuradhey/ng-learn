@@ -3,7 +3,9 @@
     "compilerOptions": {
         "module": "commonjs",
         "outDir": "build",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "target": "ES5",
+        "watch": true
     },
     "include": [
         "src/**/*"
