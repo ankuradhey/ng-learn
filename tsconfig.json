@@ -4,13 +4,14 @@
         "module": "commonjs",
         "outDir": "build",
         "experimentalDecorators": true,
-        "target": "ES5",
-        "watch": true
+        "target": "ES6",
+        "watch": true,
     },
     "include": [
         "src/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "src/day2/assignment2"
     ]
 }
