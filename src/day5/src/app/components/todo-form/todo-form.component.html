@@ -1,0 +1,4 @@
+<form class="form-inline my-2 my-lg-0 media text-muted pt-3">
+    <input class="form-control mr-sm-2" type="text" (input)="onInput($event)" [value]="todoText"  placeholder="Add todo task" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="addTodo()">Add</button>
+  </form>
