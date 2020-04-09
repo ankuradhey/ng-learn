@@ -5,9 +5,7 @@
 <main class="container">
   <div class="my-3 p-3 bg-white rounded shadow-sm">
     <h6 class="border-bottom border-gray pb-2 mb-0">TODO List</h6>
-    <app-search (onSearch)="onSearch($event)"></app-search>
     <app-todo-list [todos]="todoList" ></app-todo-list>
-    <app-todo-form (addTodoEmitter)="addTodo($event)"></app-todo-form>
   </div>
 
 </main>

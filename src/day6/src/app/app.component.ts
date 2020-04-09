@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoType} from './types/todo.type';
-
-import {SearchService} from './services/search.service';
+import { TodoData } from './data/todo';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +12,8 @@ export class AppComponent implements OnInit {
   todoList: TodoType[];
 
   
-  constructor(private searchService: SearchService){
-    this.todoList = this.searchService.fetchData();
+  constructor(){
+    this.todoList = TodoData;
     
   }
   

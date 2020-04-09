@@ -1,3 +1,38 @@
+<div class="container">
+  <div class="row">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>
+          <h5 class="m-header">Id</h5> 
+        </th>
+        <th>
+          <h5 class="m-header">Title</h5> 
+          Asc - <input type="radio" name="radiogroup" 
+          [checked]="sortOrder === 'asc'"
+          [value]="'asc'" 
+          (change)="onSelectionChange('asc')">
+          Desc - <input type="radio" name="radiogroup" 
+          [checked]="sortOrder === 'desc'"
+          [value]="'desc'" 
+          (change)="onSelectionChange('desc')">
+        </th>
+        <th>
+          <h5 class="m-header">Completed</h5> 
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let todo of todos | async | sortBy: sortOrder : 'title'">
+        <td>{{todo.id}}</td>
+        <td>{{todo.title}}</td>
+        <td>{{todo.completed}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <div class="media text-muted pt-3" *ngFor="let todo of todos">
     <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
       <div class="d-flex justify-content-between align-items-center w-100">
